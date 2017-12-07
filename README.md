@@ -48,7 +48,11 @@ page.php (optional admin settings page)
 functions.php
 ```php
 
-require 'ExampleIntegration.php';
+function AIO_GDPR_booted_callback(){
+	require 'ExampleIntegration.php';
+}
+add_action('AIO_GDPR_booted', 'AIO_GDPR_booted_callback');
+
 ```
 
 ***
