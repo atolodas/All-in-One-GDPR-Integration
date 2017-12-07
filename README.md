@@ -50,21 +50,3 @@ functions.php
 
 require 'ExampleIntegration.php';
 ```
-
-***
-
-### Installation
-
-Require WP_AJAX with composer
-
-```
-$ composer require anthonybudd/wp_ajax
-```
-
-#### Or
-
-Download the WP_AJAX class and require it at the top of your functions.php file.
-
-```php
-    require 'src/WP_AJAX.php';
-```
