@@ -55,20 +55,5 @@ add_action('AIO_GDPR_booted', 'AIO_GDPR_booted_callback');
 
 ```
 
-***
 
-### Installation
-
-Require WP_AJAX with composer
-
-```
-$ composer require anthonybudd/wp_ajax
-```
-
-#### Or
-
-Download the WP_AJAX class and require it at the top of your functions.php file.
-
-```php
-    require 'src/WP_AJAX.php';
-```
+<p align="center"><img src="https://ideea.co.uk/wp-content/themes/ideea/build/images/integration-example.png"></p>
