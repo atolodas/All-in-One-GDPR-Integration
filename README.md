@@ -50,3 +50,6 @@ functions.php
 
 require 'ExampleIntegration.php';
 ```
+
+
+<p align="center"><img src="https://ideea.co.uk/wp-content/themes/ideea/build/images/integration-example.png"></p>
