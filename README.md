@@ -9,18 +9,19 @@ class ExampleIntegration extends AIOGDPRIntegration{
 	public $name = 'Example';
 	public static $slug = 'example';
 
-
+	// Optional settings page
 	public function page(){
 		include plugin_dir_path(__FILE__) .'page.php';
 	}
-
+	
+	// Integration settings page submit hook
 	public function adminSubmit(){
 		update_option('example_api_token', $_REQUEST['example_api_token']);
 
 		$this->redirectBack();
 	}
 
-
+	// When a user unsubscribes this method will be called. 
 	public function onUnsubscribe($user, $email){
 		$request = curl_init(); 
 		curl_setopt($request, CURLOPT_URL, "http://example.com"); 
@@ -28,7 +29,7 @@ class ExampleIntegration extends AIOGDPRIntegration{
 		curl_exec($request); 
 		curl_close($request);
 	}
-
+	
 	public function onSAR($user, $email){}
 
 	public function onPermissionGranted($user, $email){}
