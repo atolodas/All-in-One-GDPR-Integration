@@ -10,8 +10,8 @@ class ExampleIntegration extends AIOGDPRIntegration{
 	public static $slug = 'example';
 
 
-	public function page(){
-		include plugin_dir_path(__FILE__) .'page.php';
+	public function view(){
+		include plugin_dir_path(__FILE__) .'view.php';
 	}
 
 	public function adminSubmit(){
@@ -40,7 +40,7 @@ class ExampleIntegration extends AIOGDPRIntegration{
 ExampleIntegration::register();
 ```
 
-page.php (optional admin settings page)
+view.php (optional admin settings page)
 ```php
 <table class="form-table">
 	<tbody>	

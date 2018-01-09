@@ -6,8 +6,8 @@ class ExampleIntegration extends AIOGDPRIntegration{
 	public static $slug = 'example';
 
 
-	public function page(){
-		include plugin_dir_path(__FILE__) .'page.php';
+	public function view(){
+		include plugin_dir_path(__FILE__) .'view.php';
 	}
 
 	public function adminSubmit(){
