@@ -1,9 +1,12 @@
 <?php
+/*
+	Plugin Name: Example Integration
+*/
 
 class ExampleIntegration extends AIOGDPRIntegration{
 
-	public $name = 'Example';
-	public $slug = 'example';
+	public $name = 'Example Integration';
+	public $slug = 'example-Integration';
 
 
 	public function view(){

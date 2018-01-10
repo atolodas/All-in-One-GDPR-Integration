@@ -3,6 +3,8 @@
 
 
 
+
+
 ```php
 class ExampleIntegration extends AIOGDPRIntegration{
 
