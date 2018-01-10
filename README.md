@@ -22,6 +22,7 @@ class ExampleIntegration extends AIOGDPRIntegration{
 
 
 
+	// When a user unsubscribes this method will be called. 
 	public function onUnsubscribe($user, $email){
 		$request = curl_init(); 
 		curl_setopt($request, CURLOPT_URL, "http://example.com"); 
@@ -29,7 +30,7 @@ class ExampleIntegration extends AIOGDPRIntegration{
 		curl_exec($request); 
 		curl_close($request);
 	}
-
+	
 	public function onSAR($user, $email){}
 
 	public function onPermissionGranted($user, $email){}
