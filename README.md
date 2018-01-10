@@ -7,18 +7,19 @@
 class ExampleIntegration extends AIOGDPRIntegration{
 
 	public $name = 'Example';
-	public static $slug = 'example';
+	public $slug = 'example';
 
 
 	public function view(){
 		include plugin_dir_path(__FILE__) .'view.php';
 	}
 
-	public function adminSubmit(){
+	public function viewSubmit(){
 		update_option('example_api_token', $_REQUEST['example_api_token']);
 
 		$this->redirectBack();
 	}
+
 
 
 	public function onUnsubscribe($user, $email){

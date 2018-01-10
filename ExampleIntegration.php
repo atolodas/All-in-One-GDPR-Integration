@@ -3,21 +3,22 @@
 class ExampleIntegration extends AIOGDPRIntegration{
 
 	public $name = 'Example';
-	public static $slug = 'example';
+	public $slug = 'example';
 
 
 	public function view(){
 		include plugin_dir_path(__FILE__) .'view.php';
 	}
 
-	public function adminSubmit(){
+	public function viewSubmit(){
 		update_option('example_api_token', $_REQUEST['example_api_token']);
 
 		$this->redirectBack();
 	}
 
 
-	public function onUnsubscribe($user, $email){
+
+	public function onUnsubscribe($email, $user){
 		$request = curl_init(); 
 		curl_setopt($request, CURLOPT_URL, "http://example.com"); 
 		curl_setopt($request, CURLOPT_RETURNTRANSFER, 1); 
@@ -25,11 +26,11 @@ class ExampleIntegration extends AIOGDPRIntegration{
 		curl_close($request);
 	}
 
-	public function onSAR($user, $email){}
+	public function onSAR($email, $user){}
 
-	public function onPermissionGranted($user, $email){}
+	public function onPermissionGranted($email, $user){}
 
-	public function onPermissionDeclined($user, $email){}
+	public function onPermissionDeclined($email, $user){}
 
 }
 
