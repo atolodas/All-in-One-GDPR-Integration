@@ -8,6 +8,12 @@ class ExampleIntegration extends AIOGDPRIntegration{
 	public $name = 'Example Integration';
 	public $slug = 'example-Integration';
 
+	
+	public function boot(){
+		if(!class_exists('\My\API\Class')){
+			require_once dirname(__FILE__) .'/My-API-Class.php';
+		}
+	}
 
 	public function view(){
 		include plugin_dir_path(__FILE__) .'view.php';
