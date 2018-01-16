@@ -1,46 +1,19 @@
 <?php
 /*
-	Plugin Name: Example Integration
-*/
+ * @wordpress-plugin
+ * Plugin Name:       All-in-One GDPR: Example Integration
+ * Plugin URI:        https://github.com/Ideea-Technologies/All-in-One-GDPR-Integration
+ * Description:       This is an example All-in-One GDPR integration
+ * Version:           1
+ * Author:            Anthony Budd, Ideea
+ * Author URI:        http://ideea.co.uk/
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain:       all-in-one-gdpr
+ */
 
-class ExampleIntegration extends AIOGDPRIntegration{
-
-	public $name = 'Example Integration';
-	public $slug = 'example-Integration';
-
-	
-	public function boot(){
-		if(!class_exists('\My\API\Class')){
-			require_once dirname(__FILE__) .'/My-API-Class.php';
-		}
-	}
-
-	public function view(){
-		include plugin_dir_path(__FILE__) .'view.php';
-	}
-
-	public function viewSubmit(){
-		update_option('example_api_token', $_REQUEST['example_api_token']);
-
-		$this->redirectBack();
-	}
-
-
-
-	public function onUnsubscribe($email, $user){
-		$request = curl_init(); 
-		curl_setopt($request, CURLOPT_URL, "http://example.com"); 
-		curl_setopt($request, CURLOPT_RETURNTRANSFER, 1); 
-		curl_exec($request); 
-		curl_close($request);
-	}
-
-	public function onSAR($email, $user){}
-
-	public function onPermissionGranted($email, $user){}
-
-	public function onPermissionDeclined($email, $user){}
-
+function exampleIntegrationCallback(){
+	require 'ExampleIntegration.php';
 }
 
-ExampleIntegration::register();
+add_action('AIO_GDPR_booted', 'exampleIntegrationCallback');
+

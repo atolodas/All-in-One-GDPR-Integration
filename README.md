@@ -1,8 +1,7 @@
-# All-in-One-GDPR-Integration
-### Example of how to Integrate with the All-in-One GDPR plugin
+# All-in-One-GDPR Integration
+### Example of how to integrate with the All-in-One GDPR WordPress plugin
 
-
-
+This repository is a working WordPress Plugin. If you are going to build an integration for All-in-One GDPR, fork or download this rep to get started.
 
 
 ```php
