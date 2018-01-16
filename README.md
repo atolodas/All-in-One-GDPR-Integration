@@ -1,9 +1,9 @@
 # All-in-One-GDPR Integration
 ### Example of how to integrate with the All-in-One GDPR WordPress plugin
 
-This repository is a working WordPress Plugin. If you are going to build an integration for (All-in-One GDPR)[https://gdprplug.in/], fork or download this rep to get started.
+This repository is a working WordPress Plugin. If you are going to build an integration for [All-in-One GDPR](https://gdprplug.in/), fork or download this rep to get started.
 
-For more informtion about how to make a integrtion for All-in-One GDPR please refer to the (GDPRPlug.in/Documentation)[https://gdprplug.in/documentation]
+For more informtion about how to make a integrtion for All-in-One GDPR please refer to the [GDPRPlug.in/Documentation](https://gdprplug.in/documentation)
 
 
 ```php
@@ -65,4 +65,4 @@ view.php (optional admin settings page)
 ```
 
 
-<p align="center"><img src="https://GDPRPlugin.co.uk/static/example-integration.png"></p>
+<p align="center"><img src="https://GDPRPlug.in/static/example-integration.png"></p>
