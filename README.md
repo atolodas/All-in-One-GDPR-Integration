@@ -1,7 +1,9 @@
 # All-in-One-GDPR Integration
 ### Example of how to integrate with the All-in-One GDPR WordPress plugin
 
-This repository is a working WordPress Plugin. If you are going to build an integration for All-in-One GDPR, fork or download this rep to get started.
+This repository is a working WordPress Plugin. If you are going to build an integration for (All-in-One GDPR)[https://gdprplug.in/], fork or download this rep to get started.
+
+For more informtion about how to make a integrtion for All-in-One GDPR please refer to the (GDPRPlug.in/Documentation)[https://gdprplug.in/documentation]
 
 
 ```php
@@ -62,15 +64,5 @@ view.php (optional admin settings page)
 </table>
 ```
 
-functions.php
-```php
 
-function AIO_GDPR_booted_callback(){
-	require 'ExampleIntegration.php';
-}
-add_action('AIO_GDPR_booted', 'AIO_GDPR_booted_callback');
-
-```
-
-
-<p align="center"><img src="https://ideea.co.uk/wp-content/themes/ideea/build/images/integration-example.png"></p>
+<p align="center"><img src="https://GDPRPlugin.co.uk/static/example-integration.png"></p>
