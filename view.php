@@ -1,5 +1,5 @@
-<form method="post" action="<?= MailchimpIntegration::formURL() ?> ">
-	<input type="hidden" name="action" value="<?= MailchimpIntegration::action() ?>">
+<form method="post" action="<?= ExampleIntegration::formURL() ?> ">
+	<input type="hidden" name="action" value="<?= ExampleIntegration::action() ?>">
 
 	<table class="form-table">
 		<tbody>	
